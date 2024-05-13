@@ -119,10 +119,10 @@ DEFAULT_LIMIT = 5000
 DEFAULT_TIMEOUT = 30
 
 # Exclusions used to exclude responses we will try to get from web.archive.org
-DEFAULT_FILTER_URL = '.css,.jpg,.jpeg,.png,.svg,.img,.gif,.mp4,.flv,.ogv,.webm,.webp,.mov,.mp3,.m4a,.m4p,.scss,.tif,.tiff,.ttf,.otf,.woff,.woff2,.bmp,.ico,.eot,.htc,.rtf,.swf,.image,/image,/img,/css,/wp-json,/wp-content,/wp-includes,/theme,/audio,/captcha,/font,node_modules,/jquery,/bootstrap'
+DEFAULT_FILTER_URL = '.css,.jpg,.jpeg,.png,.svg,.img,.tif,.tiff,.ttf,.rtf,.image,/image,/img,/bootstrap'
 
 # MIME Content-Type exclusions used to filter links and responses from web.archive.org through their API
-DEFAULT_FILTER_MIME = 'text/css,image/jpeg,image/jpg,image/png,image/svg+xml,image/gif,image/tiff,image/webp,image/bmp,image/vnd,image/x-icon,image/vnd.microsoft.icon,font/ttf,font/woff,font/woff2,font/x-woff2,font/x-woff,font/otf,audio/mpeg,audio/wav,audio/webm,audio/aac,audio/ogg,audio/wav,audio/webm,video/mp4,video/mpeg,video/webm,video/ogg,video/mp2t,video/webm,video/x-msvideo,video/x-flv,application/font-woff,application/font-woff2,application/x-font-woff,application/x-font-woff2,application/vnd.ms-fontobject,application/font-sfnt,application/vnd.android.package-archive,binary/octet-stream,application/octet-stream,application/pdf,application/x-font-ttf,application/x-font-otf,video/webm,video/3gpp,application/font-ttf,audio/mp3,audio/x-wav,image/pjpeg,audio/basic,application/font-otf,application/x-ms-application,application/x-msdownload,video/x-ms-wmv,image/x-png,video/quicktime,image/x-ms-bmp,font/opentype,application/x-font-opentype,application/x-woff,audio/aiff'
+DEFAULT_FILTER_MIME = 'text/css,image/jpeg,image/jpg,image/png,application/pdf,image/pjpeg'
 
 # Response code exclusions we will use to filter links and responses from web.archive.org through their API
 DEFAULT_FILTER_CODE = '404,301,302'
@@ -131,7 +131,7 @@ DEFAULT_FILTER_CODE = '404,301,302'
 REGEX_404 = r'<title>[^\<]*(404|not found)[^\<]*</title>'
 
 # Keywords 
-DEFAULT_FILTER_KEYWORDS = 'admin,login,logon,signin,signup,register,registration,dash,portal,ftp,panel,.js,api,robots.txt,graph,gql,config,backup,debug,db,database,git,cgi-bin,swagger,zip,rar,tar.gz,internal,jira,jenkins,confluence,atlassian,okta,corp,upload,delete,email,sql,create,edit,test,temp,cache,wsdl,log,payment,setting,mail,file,redirect,chat,billing,doc,trace,cp,ftp,gateway,import,proxy,dev,stage,stg,uat'
+DEFAULT_FILTER_KEYWORDS ='robots.txt'
 
 # Yaml config values
 FILTER_URL = ''
@@ -147,7 +147,7 @@ DEFAULT_OUTPUT_DIR = ''
 API_KEY_SECRET = "aHR0cHM6Ly95b3V0dS5iZS9kUXc0dzlXZ1hjUQ=="
 
 # When -oijs is passed, and the downloaded responses are checked for scripts, files with these extensions will be ignored
-INLINE_JS_EXCLUDE = ['.js', '.csv', '.xls', '.xlsx', '.doc', '.docx', '.pdf', '.msi', '.zip', '.gzip', '.gz', '.tar', '.rar', '.json']
+INLINE_JS_EXCLUDE = ['.msi']
 
 # Get memory usage for 
 def getMemory():
